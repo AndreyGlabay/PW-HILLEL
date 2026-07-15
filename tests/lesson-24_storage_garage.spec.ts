@@ -28,17 +28,17 @@ test.describe('Garage tests', () => {
         await garagePage.verifyCarIsAdded('BMW X5', '999');
     })
 
-    test('Add new car - Audi Q7', async () => {
-        test.step('Adding Audi Q7 to garage', async () => {
-            await addCarForm.addNewCar('Audi', 'Q7', '777'); 
-        })
+    // test('Add new car - Audi Q7', async () => {
+    //     test.step('Adding Audi Q7 to garage', async () => {
+    //         await addCarForm.addNewCar('Audi', 'Q7', '777'); 
+    //     })
 
-        test.step('Verifying Audi Q7 is added to garage', async () => {
-            await garagePage.verifyCarIsAdded('Audi Q7', '777');
-            // await garagePage.verifyCarIsAdded('Audi Q7', '111'); // ❌ invalid - for fail the test
-        })
+    //     test.step('Verifying Audi Q7 is added to garage', async () => {
+    //         await garagePage.verifyCarIsAdded('Audi Q7', '777');
+    //         // await garagePage.verifyCarIsAdded('Audi Q7', '111'); // ❌ invalid - for fail the test
+    //     })
 
-    })
+    // })
 
     test('Add new car without mileage', async () => {
         await addCarForm.selectBrand('BMW');

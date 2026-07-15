@@ -12,13 +12,14 @@ export class AddCarForm extends BaseForm {
 
     async addNewCar(brand: string, model: string, milage: string) {
         await this.selectBrand(brand);
-        await this.page.waitForTimeout(500);
+        await this.modelDropdown.locator('option').first().waitFor({ state: 'attached', timeout: 3000 });
         await this.selectModel(model);
         await this.enterMileage(milage);
         await this.clickAddCarButton();
     }
 
     async selectBrand(brand: string) {
+        await expect(this.brandDropdown).toBeEnabled({ timeout: 1000 });
         await this.brandDropdown.selectOption(brand);
     }
 
