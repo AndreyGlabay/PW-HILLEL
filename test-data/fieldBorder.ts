@@ -1,0 +1,1 @@
+export const ERROR_BORDER_COLOR = 'rgb(220, 53, 69)';

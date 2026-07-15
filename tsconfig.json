@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "types": ["node", "@playwright/test"]
+  },
+  "include": ["**/*.ts", "tests/lesson-23_pom_signIn.spec.ts"],
+  "exclude": ["node_modules", "playwright-report", "test-results"]
+}
