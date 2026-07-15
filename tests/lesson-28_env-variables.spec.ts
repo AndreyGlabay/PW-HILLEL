@@ -31,7 +31,7 @@ test('get started link', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 });
 
-test.only("Get env variable", async () => {
+test("Get env variable", async () => {
     console.log('Env variable:')
     console.log(process.env.VARIABLE_NAME)
 });
