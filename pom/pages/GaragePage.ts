@@ -20,9 +20,9 @@ export class GaragePage extends BasePage {
     }
 
     async verifyCarIsAdded(carName: string, carMileage: string) {
-        await expect(this.successAddingMessage).toBeVisible();
-        await expect(this.lastAddedCarName).toHaveText(carName);
-        await expect(this.lastAddedCarMileageField).toHaveValue(carMileage);
+        await expect(this.successAddingMessage).toBeVisible({ timeout: 3000 });
+        await expect(this.lastAddedCarName).toHaveText(carName, { timeout: 3000 });
+        await expect(this.lastAddedCarMileageField).toHaveValue(carMileage, { timeout: 3000 });
     }
 
     async openEditCarForm(carIndex: number) {
