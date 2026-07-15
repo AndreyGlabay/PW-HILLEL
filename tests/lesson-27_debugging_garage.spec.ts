@@ -23,7 +23,7 @@ test.describe('Garage tests', () => {
         await garagePage.openAddCarForm();
     })
 
-    test.only('Add new car - BMW X5', async ({page}) => {
+    test('Add new car - BMW X5', async ({page}) => {
         await addCarForm.addNewCar('BMW', 'X5', '500'); // number of miles = 500
         await page.pause();
         await garagePage.verifyCarIsAdded('BMW X5', '999'); // check number of miles = 999 (AR != ER)
