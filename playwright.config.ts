@@ -80,7 +80,13 @@ export default defineConfig({
       name: 'e2e',
       use: { ...devices['Desktop Chrome'] },
       dependencies: ['setup'],  // turn off for lesson-28 env vars
-      testIgnore: '**/*api.spec.ts'  // exclude API tests from e2e
+      testIgnore: '**/*api.spec.ts',  // exclude API tests from e2e
+      testMatch: [
+        '**/lesson-24_storage_garage.spec.ts',
+        '**/lesson-34_garage.spec.ts',
+        '**/lesson-35_expences.spec.ts',
+        '**/lesson-35_profile.spec.ts'
+      ]
     },
 
     // {
